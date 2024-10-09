@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatórios</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="relatorios.html" id="menuRelatorios">Relatórios</a></li>
+        </ul>
+    </nav>
+    <div id="statusUsuario">
+        <i id="statusIcon" class="fas fa-check-circle"></i> <!-- Ícone de usuário logado -->
+        <span id="statusTexto">Logado</span> <!-- Texto de status -->
+    </div>
+</header>
+
+<section>
+    <h1>Relatórios de Usuários</h1>
+
+    <!-- Formulário para adicionar dados aos relatórios -->
+    <form id="formRelatorio">
+        <label for="nomeRelatorio">Nome:</label>
+        <input type="text" id="nomeRelatorio" name="nomeRelatorio" required>
+
+        <label for="dadosRelatorio">Dados:</label>
+        <input type="text" id="dadosRelatorio" name="dadosRelatorio" required>
+
+        <button type="submit">Adicionar ao Relatório</button>
+        <p id="erroRelatorio"></p>
+    </form>
+
+    <!-- Tabela para exibir os relatórios -->
+    <table id="tabelaRelatorios">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Dados</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- As linhas serão inseridas aqui -->
+        </tbody>
+    </table>
+</section>
+
+<script src="relatorios.js"></script>
+<script src="index.js"></script>
+</body>
+</html>

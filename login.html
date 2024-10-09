@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="cadastro.html" id="menuCadastro">Cadastro</a></li>
+            <li><a href="login.html" id="menuLogin">Login</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section>
+    <h1>Login de Usuário</h1>
+    <form id="formLogin">
+        <label for="nomeLogin">Nome:</label>
+        <input type="text" id="nomeLogin" name="nomeLogin" required>
+
+        <label for="senhaLogin">Senha:</label>
+        <input type="password" id="senhaLogin" name="senhaLogin" required>
+
+        <button type="submit">Entrar</button>
+        <p id="erroLogin"></p>
+    </form>
+</section>
+
+<script src="login.js"></script>
+<script src="index.js"></script>
+</body>
+</html>

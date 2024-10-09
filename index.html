@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Principal</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+
+<header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="cadastro.html" id="menuCadastro">Cadastro</a></li>
+            <li><a href="login.html" id="menuLogin">Login</a></li>
+            <li><a href="relatorios.html" id="menuRelatorios" style="display: none;">Relatórios</a></li>
+        </ul>
+    </nav>
+    <div id="statusUsuario" style="position: relative;">
+        <i id="statusIcon" class="fas fa-user-circle"></i> <!-- Ícone de usuário -->
+        <span id="statusTexto">Não Logado</span> <!-- Texto de status -->
+        <div id="logoutMenu" style="display: none; position: absolute; top: 100%; left: 0; background: white; border: 1px solid #ccc; z-index: 1000;">
+            <a href="#" id="logoutLink">
+                <i class="fas fa-door-open"></i> Logout
+            </a>
+        </div>
+    </div>
+</header>
+
+<section>
+    <h1>Bem-vindo à Página Principal</h1>
+    <p>Aqui é o conteúdo principal da página, visível para todos os usuários.</p>
+</section>
+
+<script src="index.js"></script>
+</body>
+</html>
