@@ -7,6 +7,7 @@ function atualizarMenu() {
     const statusTexto = document.getElementById('statusTexto');
     const logoutMenu = document.getElementById('logoutMenu');
 
+    // Atualiza a exibição do menu com base no status de login
     if (logado) {
         menuCadastro.style.display = 'none';
         menuLogin.style.display = 'none';
@@ -14,11 +15,8 @@ function atualizarMenu() {
 
         statusIcon.classList.replace('fa-user-circle', 'fa-check-circle');
         statusTexto.textContent = 'Logado';
+        logoutMenu.style.display = 'block'; // Mostrar menu de logout
 
-        // Mostrar menu de logout
-        statusIcon.addEventListener('click', () => {
-            logoutMenu.style.display = logoutMenu.style.display === 'none' ? 'block' : 'none';
-        });
     } else {
         menuCadastro.style.display = 'block';
         menuLogin.style.display = 'block';
@@ -30,10 +28,18 @@ function atualizarMenu() {
     }
 }
 
+// Event listener para logout
 document.getElementById('logoutLink').addEventListener('click', function(event) {
     event.preventDefault();
-    sessionStorage.setItem('logado', 'false');
+    sessionStorage.setItem('logado', 'false'); // Atualiza o estado de login
     window.location.reload(); // Recarrega a página para atualizar o estado
 });
 
+// Evento para alternar a exibição do menu de logout
+document.getElementById('statusIcon').addEventListener('click', () => {
+    const logoutMenu = document.getElementById('logoutMenu');
+    logoutMenu.style.display = logoutMenu.style.display === 'none' ? 'block' : 'none';
+});
+
+// Atualiza o menu ao carregar a página
 document.addEventListener('DOMContentLoaded', atualizarMenu);
