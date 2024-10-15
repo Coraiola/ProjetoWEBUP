@@ -3,8 +3,117 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Relatórios</title>
+    <title>Relatório de Jogadores</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Estilos básicos para um layout mais bonito */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            padding: 10px;
+            color: white;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        section {
+            width: 80%;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        label {
+            font-weight: bold;
+            color: #333;
+        }
+
+        input[type="text"],
+        input[type="number"] {
+            padding: 10px;
+            font-size: 1em;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            width: 100%;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 1em;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+
+        p#erroRelatorio {
+            color: red;
+            text-align: center;
+        }
+
+        table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+        }
+
+        table thead {
+            background-color: #007bff;
+            color: white;
+        }
+
+        table th, table td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+
+        table tbody tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+    </style>
 </head>
 <body>
 
@@ -16,41 +125,45 @@
         </ul>
     </nav>
     <div id="statusUsuario">
-        <i id="statusIcon" class="fas fa-check-circle"></i> <!-- Ícone de usuário logado -->
-        <span id="statusTexto">Logado</span> <!-- Texto de status -->
+        <i id="statusIcon" class="fas fa-check-circle"></i>
+        <span id="statusTexto">Logado</span>
     </div>
 </header>
 
 <section>
-    <h1>Relatórios de Usuários</h1>
+    <h1>Relatório de Jogadores</h1>
 
-    <!-- Formulário para adicionar dados aos relatórios -->
+    <!-- Formulário para adicionar jogadores -->
     <form id="formRelatorio">
-        <label for="nomeRelatorio">Nome:</label>
-        <input type="text" id="nomeRelatorio" name="nomeRelatorio" required>
+        <label for="nomeRelatorio">Nome do Jogador:</label>
+        <input type="text" id="nomeRelatorio" name="nomeRelatorio" placeholder="Digite o nome do jogador" required>
 
-        <label for="dadosRelatorio">Dados:</label>
-        <input type="text" id="dadosRelatorio" name="dadosRelatorio" required>
+        <label for="dadosRelatorio">Posição:</label>
+        <input type="text" id="dadosRelatorio" name="dadosRelatorio" placeholder="Digite a posição do jogador" required>
 
-        <button type="submit">Adicionar ao Relatório</button>
+        <label for="numeroRelatorio">Número da Camisa:</label>
+        <input type="number" id="numeroRelatorio" name="numeroRelatorio" placeholder="Digite o número da camisa" required>
+
+        <button type="submit">Adicionar Jogador</button>
         <p id="erroRelatorio"></p>
     </form>
 
-    <!-- Tabela para exibir os relatórios -->
+    <!-- Tabela para exibir os jogadores -->
     <table id="tabelaRelatorios">
         <thead>
             <tr>
                 <th>Nome</th>
-                <th>Dados</th>
+                <th>Posição</th>
+                <th>Número da Camisa</th>
             </tr>
         </thead>
         <tbody>
-            <!-- As linhas serão inseridas aqui -->
+            <!-- Linhas de jogadores serão inseridas aqui -->
         </tbody>
     </table>
 </section>
 
-<script src="relatorios.js"></script>
-<script src="index.js"></script>
+<script src="relatorio.js"></script>
+
 </body>
 </html>

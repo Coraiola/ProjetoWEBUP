@@ -50,10 +50,12 @@ nav ul li a:hover {
     display: flex;
     align-items: center;
     color: white;
+    justify-content: flex-end; /* Alinha o conteúdo à direita */
+    width: 100%; /* Garante que o contêiner ocupe toda a largura */
 }
 
 #statusIcon {
-    margin-right: 8px; /* Espaço entre o ícone e o texto */
+    margin-left: 8px; /* Espaço entre o texto e o ícone */
     font-size: 1.5em;
     color: white; /* Cor do ícone */
 }
