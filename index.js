@@ -27,7 +27,6 @@ function atualizarMenu() {
         logoutMenu.style.display = 'none'; // Esconder menu de logout se não estiver logado
     }
 }
-
 // Event listener para logout
 document.getElementById('logoutLink').addEventListener('click', function(event) {
     event.preventDefault();
